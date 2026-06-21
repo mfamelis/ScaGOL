@@ -14,7 +14,7 @@ This document explains the core design decisions, data structures, and code orga
    The code interacts with the outside world through a small, explicit Cats Effect boundary.
 
 2. **The Elm Architecture (MVU)**
-   The project follows the **[Model-View-Update** pattern](https://guide.elm-lang.org/architecture/):
+   The project follows the [**Model-View-Update** pattern](https://guide.elm-lang.org/architecture/):
    - **Model**: The `Model` case class holds the dynamic state of the application: the `Board`, the playback state, and the deterministic `Rng` state.
    - **View**: The `render` functions purely project the current `Model` and static `Config` into a visual `Image`.
    - **Update**: The `update` function handles all transitions, processing discrete `Msg` events to generate the next `Model`.
